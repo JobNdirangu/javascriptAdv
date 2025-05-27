@@ -24,4 +24,5 @@ let user = { username: "john doe", email: "john@gmail.com" };
 let { username, email } = user;
 console.log(username); // john_doe
 
-//  Assignment: Create an object with name, age, and city. Use destructuring to extract and log them
+//  Assignment: Create an object product with properties id name, cost, quantity
+//  and description. Use destructuring to extract and log them

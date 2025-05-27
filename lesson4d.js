@@ -1,6 +1,6 @@
 // Loops allow you to execute a block of code repeatedly until a condition is met. 
 
-// for (initialization; condition; update) { 
+// for (initialization; condition; increament) { 
 // // code to run 
 // } 
 

@@ -2,13 +2,13 @@
 // .map() – Transform each element
 let numbers = [1, 3, 2, 4, 3];       
 
+let sum=0
 
+let doubled = numbers.map(n => sum =sum+n ); // [2, 4, 6]
 
-let doubled = numbers.map(n => n * 2); // [2, 4, 6]
+console.log(sum)
 
-console.log(doubled)
-
-// .filter() – Keep only matching elements
+// // .filter() – Keep only matching elements
 let evens = numbers.filter(n => n % 2 === 0); 
 console.log(evens)
 
@@ -25,16 +25,16 @@ console.log(found)
 
 
 
-// Assignment
+// // Assignment
 
-// Step 1: Create a list of 5 countries
-let countries = ["Kenya", "Brazil", "Canada", "Germany", "Japan"];
+// // Step 1: Create a list of 5 countries
+// let countries = ["Kenya", "Brazil", "Canada", "Germany", "Japan"];
 
-// Step 2: Use .slice() to get a portion of the list
-// Get the 2nd to 4th countries (index 1 to index 3, end index is not included)
-let someCountries = countries.slice(1, 4);
-console.log("Sliced Countries:", someCountries); // Output: ["Brazil", "Canada", "Germany"]
+// // Step 2: Use .slice() to get a portion of the list
+// // Get the 2nd to 4th countries (index 1 to index 3, end index is not included)
+// let someCountries = countries.slice(1, 4);
+// console.log("Sliced Countries:", someCountries); // Output: ["Brazil", "Canada", "Germany"]
 
-// Step 3: Use .filter() to get countries with names longer than 5 characters
-let longNamedCountries = countries.filter(country => country.length > 5);
-console.log("Countries with long names:", longNamedCountries); // Output: ["Brazil", "Canada", "Germany"]
+// // Step 3: Use .filter() to get countries with names longer than 5 characters
+// let longNamedCountries = countries.filter(country => country.length > 5);
+// console.log("Countries with long names:", longNamedCountries); // Output: ["Brazil", "Canada", "Germany"]
