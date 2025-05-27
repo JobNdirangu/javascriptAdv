@@ -1,13 +1,14 @@
 // Array Methods
 // .map() – Transform each element
-let numbers = [1, 3, 2, 4, 3];
-let x=numbers.get(3)
-console.log(x)
+let numbers = [1, 3, 2, 4, 3];       
+
+
+
 let doubled = numbers.map(n => n * 2); // [2, 4, 6]
 
+console.log(doubled)
 
 // .filter() – Keep only matching elements
-console.log(doubled)
 let evens = numbers.filter(n => n % 2 === 0); 
 console.log(evens)
 

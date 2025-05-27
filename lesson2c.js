@@ -13,3 +13,13 @@ let student = {
 // Access properties using: - Dot notation: `object.key` - Bracket notation: `object["key"]`
 console.log(student.name)
 console.log(student['name'])
+
+
+// Objects are used to store keyed collections of various data and more complex entities. 
+// Destructuring lets you unpack values from arrays or properties from objects.
+
+let user = { username: "john doe", email: "john@gmail.com" };
+let { username, email } = user;
+console.log(username); // john_doe
+
+//  Assignment: Create an object with name, age, and city. Use destructuring to extract and log them
