@@ -14,6 +14,8 @@ let student = {
 console.log(student.name)
 console.log(student['name'])
 
+// Assignmet: create an object of player,mpesa transaction,car model
+
 
 // Objects are used to store keyed collections of various data and more complex entities. 
 // Destructuring lets you unpack values from arrays or properties from objects.
