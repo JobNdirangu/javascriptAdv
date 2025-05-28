@@ -12,10 +12,29 @@ console.log(a ** b);   // 1000
 // compound assignments
 let x = 5;
 x += 2; // x = 7
+x -= 2; // x = 7
 x *= 3; // x = 21
+x %= 2;
+x /= 2
 
 // Increments & Decrements:
 let y = 1;
 y++;  // y = 2
 ++y;  // y = 3
 y--;  // y = 2
+
+// Assignment 
+// Area of a rectangle, triangle, perimeter,circle 
+
+// Comaprison Operators 
+// == Equal to (value) 5 == 5 true
+//  != Not equal to (value) 5 != 3 true
+//  > Greater than 5 > 3 true
+//  < Less than 5 < 8 true
+//  >= Greater than or equal to 5 >= 5 true
+//  <= Less than or equal to 3 <= 4 true
+
+// Logical Operators
+// && Logical AND true && false false
+//  || Logical OR true || false Logical OR
+//  ! Logical NOT !true false
