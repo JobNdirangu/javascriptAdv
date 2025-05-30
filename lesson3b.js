@@ -11,11 +11,18 @@ console.log(a ** b);   // 1000
 
 // compound assignments
 let x = 5;
+console.log(x)
 x += 2; // x = 7
+console.log(x)
 x -= 2; // x = 7
+console.log(x)
 x *= 3; // x = 21
+
+console.log(x)
 x %= 2;
+console.log(x)
 x /= 2
+console.log(x)
 
 // Increments & Decrements:
 let y = 1;
