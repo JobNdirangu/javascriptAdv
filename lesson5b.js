@@ -21,4 +21,6 @@ const sum = (num1,num2) => {
 sum(12,10)
 
 
+// assignment: arrow function to create simple intrest
+
 
