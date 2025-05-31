@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lesson 6b - Event Handling</title>
+</head>
+<body>
+  <h1 id="mainTitle">Hover or Click Me!</h1>
+  <button onclick="handleClick()">Click Button</button>
+  <!-- ondblclick -->
+  <br><br>
+
+  <input id="textInput" type="text" placeholder="Type something" onkeydown="handleKeyDown(event)">
+  <br><br>
+
+  <select id="dropdown" onchange="handleChange()">
+    <option value="">Select a fruit</option>
+    <option value="Apple">Apple</option>
+    <option value="Banana">Banana</option>
+    <option value="Mango">Mango</option>
+  </select>
+
+  <p id="feedback"></p>
+
+  <form onsubmit="formSubmit(event)">
+        <input type="text" placeholder="Your name">
+        <button type="submit">Submit</button>
+   </form>
+
+  <script>
+    const mainTitle = document.getElementById("mainTitle");
+    const feedback = document.getElementById("feedback");
+
+    // Click event
+    const handleClick=()=> {
+      alert("The button has been clicked")
+    }
+
+    // Mouse over event
+    mainTitle.onclick=()=> {
+        mainTitle.style.color = "blue";
+        feedback.innerText = "Title has been clicked.";
+        feedback.style.color = "blue";
+
+    }
+    mainTitle.onmouseover =  ()=> {
+      mainTitle.style.color = "red";
+      feedback.innerText = "Mouse is over the title.";
+    };
+
+    // Mouse out event
+    mainTitle.onmouseout = function () {
+      mainTitle.style.color = "black";
+      feedback.innerText = "Mouse left the title.";
+    };
+
+    // Change event on dropdown
+    const handleChange=()=> {
+      let selectedValue = document.getElementById("dropdown").value;
+      feedback.innerText = "You selected: " + selectedValue;
+    }
+
+    // Keydown event
+    const handleKeyDown=(event)=> {
+      feedback.innerText = `You pressed: ${event.key}`;
+    }
+
+    // submit
+    const formSubmit=(event) =>{
+        event.preventDefault() 
+        feedback.innerHTML="<h1 style='color:green'>The form has been submitted</h1>"
+    }
+  </script>
+</body>
+</html>

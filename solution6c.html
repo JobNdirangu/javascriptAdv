@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>To-Do List</title>
+</head>
+<body>
+  <h1>My To-Do List</h1>
+
+  <form onsubmit="addTask(event)">
+    <input id="taskInput" type="text" placeholder="Enter a task" />
+    <button type="submit">Add Task</button>
+  </form>
+
+  <ul id="taskList"></ul>
+
+  <p id="feedback"></p>
+
+  <script>
+    const taskInput = document.getElementById("taskInput");
+    const taskList = document.getElementById("taskList");
+    const feedback = document.getElementById("feedback");
+
+    const addTask = (event) => {
+      event.preventDefault(); // prevent form reload
+
+      const task = taskInput.value.trim();
+
+      if (task === "") {
+        alert("Input is empty")
+        return
+      }
+
+      // Create new list item
+      const li = document.createElement("li");
+      li.innerText = task;
+
+      // Mark as completed on click
+      li.onclick = ()=> {
+        li.style.textDecoration = "line-through";
+        feedback.innerText = `"${task}" marked as done!`;
+        feedback.style.color = "green";
+      };
+
+      // Delete on double click
+      li.ondblclick = function () {
+        taskList.removeChild(li);
+        feedback.innerText = `"${task}" deleted.`;
+        feedback.style.color = "orange";
+      };
+
+      // Add the task to the list
+      taskList.appendChild(li);
+
+      // Clear input and feedback
+      taskInput.value = "";
+      feedback.innerText = "";
+    };
+  </script>
+</body>
+</html>

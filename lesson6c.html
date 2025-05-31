@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lesson: Create & Remove Elements</title>
+</head>
+<body>
+  <h1>My Dynamic List</h1>
+
+  <input type="text" id="itemInput" placeholder="Enter item" />
+  <button onclick="addItem()">Add Item</button>
+
+  <ul id="itemList"></ul>
+
+  <script>
+    const itemInput = document.getElementById("itemInput");
+    const itemList = document.getElementById("itemList");
+    
+
+    const addItem=()=> {
+      const value = itemInput.value.trim();
+
+      if (value === "") return;
+
+      // Create <li> element
+      const li = document.createElement("li");
+
+      // Set the text
+      li.innerText = value;
+
+      // Create delete button
+      const delBtn = document.createElement("button");
+      delBtn.innerText = "Delete";
+      delBtn.style.marginLeft = "10px";
+      delBtn.style.color = "white";
+      delBtn.style.backgroundColor = "red";
+      delBtn.onclick = function () {
+        itemList.removeChild(li); // remove the <li> from the list
+      };
+
+      // Add button to list item
+      li.appendChild(delBtn);
+
+      // Add <li> to <ul>
+      itemList.appendChild(li);
+
+      // Clear input
+      itemInput.value = "";
+    }
+  </script>
+</body>
+</html>

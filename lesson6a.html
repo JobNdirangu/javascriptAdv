@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title" style="color: blue;">Hello! World</h1>
+    <button onclick="changeTitle()">Change text</button>
+    <button onclick="changeContent()">Change Content</button> <br><br>
+
+    <input id="myInput" type="text" value="">
+    <button onclick="getInputValue()">Get Value</button>
+
+
+
+
+    <script>
+        const changeTitle=()=> {
+            let element = document.getElementById("title"); // grabs the <h1>
+            element.innerText = "You clicked the button!"; // changes the text
+            // getElementcontent()
+        }
+
+        const changeContent=()=> {
+            document.getElementById("title").innerHTML = "<span style='color: red;'>Welcome <strong>Back</strong>!</span>";
+            getElementcontent()
+        }
+
+
+        const getElementcontent=()=> {
+            
+            // get the content of an elemet
+            let h1=document.getElementById("title")
+            let content=h1.innerText
+            console.log("content: ",content)
+            
+        }
+
+        const  getInputValue=()=> {
+
+            // extract the value from an input field
+            let input = document.getElementById("myInput");
+            let value = input.value;
+            console.log("input value: ",value); // Logs: "Hello!"
+
+            
+        }
+        </script>
+
+</body>
+</html>
